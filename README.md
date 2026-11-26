@@ -1,3 +1,5 @@
+Substantial Java codebase I own and maintain — Spring Boot, Spring Security, MySQL, Docker, JUnit, CI
+
 # bug-tracker-java
 
 **Substantial Java codebase I own and maintain — Spring Boot, Spring Security, MySQL, Docker, JUnit, CI**
