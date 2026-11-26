@@ -2,8 +2,6 @@ Substantial Java codebase I own and maintain — Spring Boot, Spring Security, M
 
 # bug-tracker-java
 
-**Substantial Java codebase I own and maintain — Spring Boot, Spring Security, MySQL, Docker, JUnit, CI**
-
 A production-style bug-tracking API designed to make correctness, validation, edge cases, and maintainability reviewable. I use this codebase to author agentic coding tasks with task-specific rubrics and regression tests.
 
 ## Features
@@ -24,11 +22,15 @@ Java 17 · Spring Boot · Spring Security · Spring Data JPA · MySQL · Maven �
 ## How to Run
 
 ```bash
-# Start a local MySQL database named bugtracker, then configure credentials if needed
+export SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/bugtracker
+export SPRING_DATASOURCE_USERNAME=bugtracker
+export SPRING_DATASOURCE_PASSWORD=change-me
+export BUGTRACKER_USERNAME=reviewer
+export BUGTRACKER_PASSWORD=change-me
 mvn spring-boot:run
 ```
 
-The API is available at `http://localhost:8080/api/bugs`. Requests use HTTP Basic authentication with the development user `reviewer`; override this configuration before production use.
+The API is available at `http://localhost:8080/api/bugs`. Configure all credentials through environment variables; do not commit them to the repository.
 
 ## Tests
 
